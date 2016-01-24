@@ -102,6 +102,9 @@ add_action( 'widgets_init', 'david_vg_widgets_init' );
 function david_vg_scripts() {
 	wp_enqueue_style( 'david-vg-style', get_stylesheet_uri() );
 
+	// Google Fonts
+	wp_enqueue_style( 'davig-vg-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:600|Libre+Baskerville', array(), '24012016', 'all' );
+
 	wp_enqueue_script( 'david-vg-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'david-vg-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );

@@ -27,6 +27,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Typography
 # Elements
 # Forms
+# Structure
 # Navigation
 	## Links
 	## Menus
@@ -42,6 +43,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Entries
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -275,6 +277,8 @@ textarea {
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
+	font-family: 'Libre Baskerville', serif;
+	word-break: break-word;
 }
 
 h1,
@@ -284,6 +288,8 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
 }
 
 p {
@@ -487,6 +493,17 @@ textarea {
 	padding-left: 3px;
 	width: 100%;
 }
+
+
+/*--------------------------------------------------------------
+# Structure
+--------------------------------------------------------------*/
+
+.wrap {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
 
 /*--------------------------------------------------------------
 # Navigation
@@ -886,3 +903,54 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*--------------------------------------------------------------
+# Entries
+--------------------------------------------------------------*/
+
+.site-main {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.hentry {
+	max-width: 300px;
+	padding: 0;
+	margin: 10px;
+	border: 1px solid #404040;
+	border-radius: 3px;
+	background: #F3F3F3;
+}
+
+.entry-header {
+	padding: 5px;
+	background: #333;
+}
+
+.entry-title {
+	margin: 0;
+	font-size: 1.2em;
+}
+
+.entry-title a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.entry-content {
+	margin: 0;
+	padding: 5px;
+}
+
+.entry-footer {
+	margin: 0;
+	padding: 5px;
+}
+
+
+
+

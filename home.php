@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area wrap">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -20,11 +20,10 @@ get_header(); ?>
 				'pocket_stream',
 				),
 			'post_status' 			 => 'publish',
-			'order'               	 => 'DESC',
-			'no_found_rows'          => false,
-			'cache_results'          => true,
-			'update_post_term_cache' => true,
-			'update_post_meta_cache' => true,
+			'posts_per_page'         => 100,
+			'posts_per_archive_page' => 100,
+			'nopaging'               => false,
+			'paged'                  => get_query_var('paged'),
 		);
 
 		$query = new WP_Query( $args );

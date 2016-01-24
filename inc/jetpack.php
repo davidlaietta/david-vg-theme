@@ -12,9 +12,12 @@
  */
 function david_vg_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
-		'container' => 'main',
-		'render'    => 'david_vg_infinite_scroll_render',
-		'footer'    => 'page',
+		'type'			 => 'scroll',
+		'container' 	 => 'main',
+		'render'    	 => 'david_vg_infinite_scroll_render',
+		'footer'    	 => 'page',
+	    'wrapper'        => false,
+	    'posts_per_page' => 6,
 	) );
 } // end function david_vg_jetpack_setup
 add_action( 'after_setup_theme', 'david_vg_jetpack_setup' );
