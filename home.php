@@ -11,6 +11,9 @@ get_header(); ?>
 	<div id="primary" class="content-area wrap">
 		<main id="main" class="site-main" role="main">
 
+		<!-- Set a Grid Sizer for Masonry -->
+		<article class="grid-sizer"></article>
+
 		<?php
 
 		$args = array(
@@ -22,7 +25,7 @@ get_header(); ?>
 			'post_status' 			 => 'publish',
 			'posts_per_page'         => 100,
 			'posts_per_archive_page' => 100,
-			'nopaging'               => false,
+			'nopaging'               => true,
 			'paged'                  => get_query_var('paged'),
 		);
 

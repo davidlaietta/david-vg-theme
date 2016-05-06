@@ -100,10 +100,13 @@ add_action( 'widgets_init', 'david_vg_widgets_init' );
  * Enqueue scripts and styles.
  */
 function david_vg_scripts() {
-	wp_enqueue_style( 'david-vg-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'david-vg-style', get_stylesheet_uri() );
 	// Google Fonts
 	wp_enqueue_style( 'davig-vg-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:600|Libre+Baskerville', array(), '24012016', 'all' );
+
+	// Masonry
+	wp_enqueue_script( 'david-vg-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'jquery' ), '4.0.0', true );
 
 	wp_enqueue_script( 'david-vg-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -112,6 +115,10 @@ function david_vg_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// Theme Scripts
+	wp_enqueue_script( 'david-vg-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '050516', true );
+
 }
 add_action( 'wp_enqueue_scripts', 'david_vg_scripts' );
 
