@@ -17,6 +17,8 @@ get_header(); ?>
 			<?php the_post_navigation(); ?>
 
 			<?php
+			echo '<pre>'; print_r( _get_cron_array() ); echo '</pre>';
+
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();

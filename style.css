@@ -503,6 +503,15 @@ textarea {
 	margin: 0 auto;
 }
 
+.site-header .wrap,
+.site-content,
+.site-footer .wrap {
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 2rem;
+	padding-left: 2rem;
+}
+
 
 /*--------------------------------------------------------------
 # Navigation
@@ -539,8 +548,8 @@ a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
 	width: 100%;
+	overflow: hidden;
 }
 
 .main-navigation ul {
@@ -548,16 +557,19 @@ a:active {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	text-align: center;
 }
 
 .main-navigation li {
-	float: left;
+	display: inline-block;
 	position: relative;
+	padding: 10px 10px;
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	color: #404040;
 }
 
 .main-navigation ul ul {
@@ -908,10 +920,6 @@ object {
 --------------------------------------------------------------*/
 
 .site-content .wrap {
-	margin-right: auto;
-	margin-left: auto;
-	padding-right: 2rem;
-	padding-left: 2rem;
 }
 
 .site-content .wrap .site-main {
@@ -921,7 +929,6 @@ object {
 
 .entry-header {
 	padding: 10px;
-	background: #333;
 }
 
 .entry-title {
@@ -930,7 +937,6 @@ object {
 }
 
 .entry-title a {
-	color: #FFFFFF;
 	text-decoration: none;
 }
 

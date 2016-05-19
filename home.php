@@ -17,16 +17,12 @@ get_header(); ?>
 		<?php
 
 		$args = array(
-			'post_type' => array(
-				'post',
+			'post_type'		=> array(
+			    'post',
 				'twitter_stream',
 				'pocket_stream',
 				),
-			'post_status' 			 => 'publish',
-			'posts_per_page'         => 100,
-			'posts_per_archive_page' => 100,
-			// 'nopaging'               => true,
-			'paged'                  => get_query_var('paged'),
+			'post_status'	=> 'publish',
 		);
 
 		$query = new WP_Query( $args );
@@ -47,7 +43,6 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
-
 		?>
 
 		</main><!-- #main -->
