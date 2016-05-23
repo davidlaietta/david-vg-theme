@@ -115,20 +115,25 @@ add_action( 'widgets_init', 'david_vg_widgets_init' );
  */
 function david_vg_scripts() {
 
+	// Main Stylesheet
 	wp_enqueue_style( 'david-vg-style', get_stylesheet_uri() );
+
 	// Google Fonts
 	wp_enqueue_style( 'davig-vg-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:600|Libre+Baskerville', array(), '24012016', 'all' );
 
 	// Font Awesome http://fortawesome.github.io/Font-Awesome
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css' , array(), '4.6.2', 'all' );
+
 	// Masonry
-	// wp_enqueue_script( 'david-vg-isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array( 'jquery' ), '4.0.0', true );
 	wp_enqueue_script( 'david-vg-salvatorre', get_template_directory_uri() . '/js/salvatorre.min.js', array( 'jquery' ), '1.0.9', true );
 
+	// Navigation
 	wp_enqueue_script( 'david-vg-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
+	// Accessibility Skip Focus
 	wp_enqueue_script( 'david-vg-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+	// Comments
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

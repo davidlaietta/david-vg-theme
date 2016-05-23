@@ -27,31 +27,6 @@ jQuery(document).ready(function ($) {
 
         });
 
-        // JQuery Masonry
-        $(function () {
-
-            // $('.site-main').isotope({
-            //   fitWidth: true,
-            //   itemSelector: '.grid-item',
-            //   columnWidth: '.grid-sizer',
-            //   percentPosition: true,
-            // });
-
-
-            // $('.home .site-main').isotope({
-            //     // main isotope options
-            //     itemSelector: '.grid-item',
-            //     // set layoutMode
-            //     layoutMode: 'masonry',
-            //     // options for masonry layout mode
-            //     masonry: {
-            //         columnWidth: '.grid-sizer'
-            //     }
-            // });
-
-        });
-
-
     }(jQuery));
 
     /*
