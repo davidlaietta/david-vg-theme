@@ -38,16 +38,16 @@ jQuery(document).ready(function ($) {
             // });
 
 
-            $('.site-main').isotope({
-                // main isotope options
-                itemSelector: '.grid-item',
-                // set layoutMode
-                layoutMode: 'masonry',
-                // options for masonry layout mode
-                masonry: {
-                    columnWidth: '.grid-sizer'
-                }
-            });
+            // $('.home .site-main').isotope({
+            //     // main isotope options
+            //     itemSelector: '.grid-item',
+            //     // set layoutMode
+            //     layoutMode: 'masonry',
+            //     // options for masonry layout mode
+            //     masonry: {
+            //         columnWidth: '.grid-sizer'
+            //     }
+            // });
 
         });
 

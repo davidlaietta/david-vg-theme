@@ -2,7 +2,7 @@
 /**
  * Template part for displaying single posts.
  *
- * @package David VG
+ * @package David_VG
  */
 
 ?>

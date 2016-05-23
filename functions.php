@@ -1,8 +1,10 @@
 <?php
 /**
- * David VG functions and definitions
+ * _s functions and definitions.
  *
- * @package David VG
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package _s
  */
 
 if ( ! function_exists( 'david_vg_setup' ) ) :
@@ -17,8 +19,8 @@ function david_vg_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on David VG, use a find and replace
-	 * to change 'david-vg' to the name of your theme in all the template files
+	 * If you're building a theme based on _s, use a find and replace
+	 * to change 'david-vg' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'david-vg', get_template_directory() . '/languages' );
 
@@ -36,13 +38,13 @@ function david_vg_setup() {
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'david-vg' ),
+		'primary' => esc_html__( 'Primary', 'david-vg' ),
 	) );
 
 	/*
@@ -57,13 +59,25 @@ function david_vg_setup() {
 		'caption',
 	) );
 
+	/*
+	 * Enable support for Post Formats.
+	 * See https://developer.wordpress.org/themes/functionality/post-formats/
+	 */
+	add_theme_support( 'post-formats', array(
+		'aside',
+		'image',
+		'video',
+		'quote',
+		'link',
+	) );
+
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'david_vg_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // david_vg_setup
+endif;
 add_action( 'after_setup_theme', 'david_vg_setup' );
 
 /**
@@ -81,17 +95,17 @@ add_action( 'after_setup_theme', 'david_vg_content_width', 0 );
 /**
  * Register widget area.
  *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function david_vg_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'david-vg' ),
 		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'description'   => esc_html__( 'Add widgets here.', 'david-vg' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'david_vg_widgets_init' );
@@ -108,7 +122,8 @@ function david_vg_scripts() {
 	// Font Awesome http://fortawesome.github.io/Font-Awesome
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css' , array(), '4.6.2', 'all' );
 	// Masonry
-	wp_enqueue_script( 'david-vg-isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array( 'jquery' ), '4.0.0', true );
+	// wp_enqueue_script( 'david-vg-isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array( 'jquery' ), '4.0.0', true );
+	wp_enqueue_script( 'david-vg-salvatorre', get_template_directory_uri() . '/js/salvatorre.min.js', array( 'jquery' ), '1.0.9', true );
 
 	wp_enqueue_script( 'david-vg-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -147,4 +162,5 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Load Jetpack compatibility file.
  */
-// require get_template_directory() . '/inc/jetpack.php';
+require get_template_directory() . '/inc/jetpack.php';
+
