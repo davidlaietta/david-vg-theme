@@ -886,6 +886,7 @@ a:active {
 
 .grid-item .entry-header img {
 	display: block;
+	width: 100%;
 }
 
 .grid-item .entry-header .entry-title {

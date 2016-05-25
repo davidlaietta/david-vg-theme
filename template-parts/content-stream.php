@@ -28,9 +28,9 @@ if ( 'twitter_stream' == get_post_type() ) {
 
 			if( $post_type == 'get-pocket' ) {
 				the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-				var_dump( get_post_meta( $post->ID, '_save_id' ) );
+				// var_dump( get_post_meta( $post->ID, '_save_id' ) );
 			} elseif( $post_type == 'twitter' ) {
-				var_dump( get_post_meta( $post->ID, '_tweet_id' ) );
+				// var_dump( get_post_meta( $post->ID, '_tweet_id' ) );
 			}
 
 			if ( 'post' === get_post_type() ) :
